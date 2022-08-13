@@ -9,6 +9,7 @@ SU_ROV::SU_ROV(QObject *parent) : QObject(parent)
 
     connect(&timer, &QTimer::timeout,[this](){
         X[2][0]=K[32];
+
     });
     timer.start(1000);
 }
