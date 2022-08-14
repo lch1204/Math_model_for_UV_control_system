@@ -11,12 +11,14 @@ extern double X[2000][2];
 struct InitData {
     double k_gamma;
     double m;
+    double Farx[1][4];
     double delta_m;
     double cv1[3];
     double cv2[3];
     double cw1[3];
     double cw2[3];
     double lambda[6][6];
+    double Ta[6][8];
     double J[3];
     double kd;
     double h;
@@ -49,6 +51,7 @@ public:
     //константы
     double k_gamma;
     double m;
+    double Farx[2][4];
     double g;
     double G;
     double delta_m;
@@ -57,7 +60,10 @@ public:
     double cw1[3];
     double cw2[3];
     double lambda[7][7];
-    double J[3];
+    double Ta[7][9];
+    double C[7][7];
+    double Vt[7];
+    double J[4];
     double kd;
     double h;
     double Td;
@@ -80,8 +86,11 @@ public:
     double Ppnp_z, Ppnl_z, Pznp_z, Pznl_z, Ppvp_z, Ppvl_z, Pzvl_z, Pzvp_z;
     double Upnp, Upnl, Uznp, Uznl, Upvp, Upvl, Uzvl, Uzvp; //напряжения движителей
 
-    double FloatageX, FloatageY, FloatageZ, Fdx, Fdy, Fdz, Fgx, Fgy, Fgz;
+    double FloatageX, FloatageY, FloatageZ, Fdx, Fdy, Fdz, Fgx, Fgy, Fgz, Fcx, Fcy, Fcz;
     double Mdx, Mdy, Mdz, Mgx, Mgy, Mgz;
+    double Mpnp_x, Mpnl_x, Mznp_x, Mznl_x, Mpvp_x, Mpvl_x, Mzvl_x, Mzvp_x;
+    double Mpnp_y, Mpnl_y, Mznp_y, Mznl_y, Mpvp_y, Mpvl_y, Mzvl_y, Mzvp_y;
+    double Mpnp_z, Mpnl_z, Mznp_z, Mznl_z, Mpvp_z, Mpvl_z, Mzvl_z, Mzvp_z;
     double Max,May,Maz; // моменты от силы Архимеда
 
     double x_global, y_global, z_global;
